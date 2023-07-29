@@ -3,35 +3,41 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import string
 import tensorflow as tf
-from transformers import TFBertModel
-from transformers import BertTokenizer
 from tensorflow import keras
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 
+print(tf.__version__)
+
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('stopwords')
 
-with open('dff-operaomnia-lost-script.csv', mode='r', encoding='utf-8') as f:
+with open('training_data.txt', 'r', encoding='utf-8') as f:
     raw_data = f.read()
-
-bert_model_name = "bert-base-uncased"
-bert_tokenizer = BertTokenizer.from_pretrained(bert_model_name)
-bert_model = TFBertModel.from_pretrained(bert_model_name)
 
 
 def preprocess(data):
-    tokens = bert_tokenizer.tokenize(data)
+    tokens = nltk.word_tokenize(data)
+
+    tokens = [word.lower() for word in tokens]
+
+    stop_words = set(stopwords.words('english'))
+    tokens = [word for word in tokens if word not in stop_words and word not
+              in string.punctuation]
+
+    lemmatizer = WordNetLemmatizer()
+    tokens = [lemmatizer.lemmatize(word) for word in tokens]
+
     return tokens
 
 
-processed_data = [" ".join(preprocess(qa)) for qa in raw_data.split('\n')]
+processed_data = [preprocess(qa) for qa in raw_data.split('\n')]
 
-vocab_size = 5000
-embedding_dim = 64
-max_length = 128
+vocab_size = 200
+embedding_dim = 100
+max_length = 50
 trunc_type = 'post'
 padding_type = 'post'
 oov_tok = "<OOV>"
@@ -46,11 +52,11 @@ padded_sequences = pad_sequences(sequences, maxlen=max_length,
                                  padding=padding_type, truncating=trunc_type)
 
 training_data = padded_sequences[:training_size]
-training_labels = np.array(sequences)[:training_size, 1:]
+training_labels = padded_sequences[:training_size]
 
 model = tf.keras.Sequential([
-    tf.keras.layers.Input(shape=(max_length,), dtype='int32'),
-    bert_model,
+    tf.keras.layers.Embedding(vocab_size, embedding_dim,
+                              input_length=max_length),
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Conv1D(64, 5, activation='relu'),
     tf.keras.layers.MaxPooling1D(pool_size=4),
