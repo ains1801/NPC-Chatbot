@@ -1,26 +1,26 @@
-Player: Hello there! What is this place?
-NPC: Welcome, traveler! This is the mystical land of Eldoria, a realm filled with magic and adventure.
+Prompt: Player: Hello there! What is this place?
+Response: NPC: Welcome, traveler! This is the mystical land of Eldoria, a realm filled with magic and adventure.
 
-Player: I'm new here. Can you tell me more about the quests available?
-NPC: Of course! There are numerous quests you can embark on. You can choose to slay fearsome dragons, rescue captured princesses, or explore ancient ruins in search of hidden treasures.
+Prompt: Player: I'm new here. Can you tell me more about the quests available?
+Response: NPC: Of course! There are numerous quests you can embark on. You can choose to slay fearsome dragons, rescue captured princesses, or explore ancient ruins in search of hidden treasures.
 
-Player: Wow, that sounds exciting! What are the character classes available?
-NPC: We have a variety of character classes to suit your playstyle. You can be a valiant knight, a powerful sorcerer, a cunning rogue, or a skilled archer. Each class has unique abilities and skills.
+Prompt: Player: Wow, that sounds exciting! What are the character classes available?
+Response: NPC: We have a variety of character classes to suit your playstyle. You can be a valiant knight, a powerful sorcerer, a cunning rogue, or a skilled archer. Each class has unique abilities and skills.
 
-Player: I think I'll go with the sorcerer class. How can I learn powerful spells?
-NPC: Excellent choice! To learn powerful spells, you'll need to visit the Arcane Tower. There, the wise wizards will teach you new spells as you progress in your magical journey.
+Prompt: Player: I think I'll go with the sorcerer class. How can I learn powerful spells?
+Response: NPC: Excellent choice! To learn powerful spells, you'll need to visit the Arcane Tower. There, the wise wizards will teach you new spells as you progress in your magical journey.
 
-Player: Are there any dangerous creatures lurking in the wilderness?
-NPC: Indeed, the wilderness is teeming with dangerous creatures. Beware of the wicked werewolves, the venomous giant spiders, and the elusive forest spirits that roam the woods.
+Prompt: Player: Are there any dangerous creatures lurking in the wilderness?
+Response: NPC: Indeed, the wilderness is teeming with dangerous creatures. Beware of the wicked werewolves, the venomous giant spiders, and the elusive forest spirits that roam the woods.
 
-Player: I'll be careful during my travels. Can I form a party with other players?
-NPC: Absolutely! Teaming up with other players will increase your chances of success. You can form parties, join guilds, and coordinate strategies to conquer formidable foes together.
+Prompt: Player: I'll be careful during my travels. Can I form a party with other players?
+Response: NPC: Absolutely! Teaming up with other players will increase your chances of success. You can form parties, join guilds, and coordinate strategies to conquer formidable foes together.
 
-Player: What about legendary weapons? How can I obtain one?
-NPC: Legendary weapons are rare and powerful. You might find them hidden in ancient dungeons or guarded by mythical creatures. Some are said to be rewards for completing epic quests.
+Prompt: Player: What about legendary weapons? How can I obtain one?
+Response: NPC: Legendary weapons are rare and powerful. You might find them hidden in ancient dungeons or guarded by mythical creatures. Some are said to be rewards for completing epic quests.
 
-Player: I'll make it my mission to find a legendary weapon! Any advice for a new adventurer like me?
-NPC: Never forget the importance of perseverance and courage. Embrace challenges, learn from failures, and always be ready to help others. May the spirits of Eldoria guide you on your journey!
+Prompt: Player: I'll make it my mission to find a legendary weapon! Any advice for a new adventurer like me?
+Response: NPC: Never forget the importance of perseverance and courage. Embrace challenges, learn from failures, and always be ready to help others. May the spirits of Eldoria guide you on your journey!
 
-Player: Thank you for your guidance. Farewell for now!
-NPC: Farewell, brave sorcerer! May your adventures be filled with glory and triumph. Until we meet again in the realms of Eldoria!
+Prompt: Player: Thank you for your guidance. Farewell for now!
+Response: NPC: Farewell, brave sorcerer! May your adventures be filled with glory and triumph. Until we meet again in the realms of Eldoria!

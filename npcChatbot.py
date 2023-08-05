@@ -7,8 +7,7 @@ from tensorflow import keras
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
-
-print(tf.__version__)
+import openai
 
 nltk.download('punkt')
 nltk.download('wordnet')
@@ -58,14 +57,15 @@ model = tf.keras.Sequential([
     tf.keras.layers.Embedding(vocab_size, embedding_dim,
                               input_length=max_length),
     tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Conv1D(64, 5, activation='relu'),
+    tf.keras.layers.Conv1D(50, 5, activation='relu'),
     tf.keras.layers.MaxPooling1D(pool_size=4),
-    tf.keras.layers.LSTM(64),
-    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.LSTM(50),
+    tf.keras.layers.Dense(50, activation='relu'),
     tf.keras.layers.Dense(vocab_size, activation='softmax')
 ])
+model.output_shape
 
-model.compile(loss='sparse_categorical_crossentropy', optimizer='adam',
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
 num_epochs = 50
